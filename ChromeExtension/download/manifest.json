@@ -1,0 +1,59 @@
+{
+    "manifest_version": 2,
+    "name": "下载助手",
+    "version": "1.0",
+
+    "description": "百度文库下载",
+
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+
+    /* 工具栏中，地址栏的右侧图标 */
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon.png",
+            "38": "images/icon.png"
+        },
+        "default_title": "默认标题",
+        "default_popup": "popup.html"  // 左键单击弹出框
+    },
+
+    /* 何时注入什么页面 */
+    "content_scripts": [
+        {
+            "matches": ["*://*/*", "file://*"],
+            "js": ["js/search.js"]
+        }
+    ],
+
+    /* 是否允许跨域 - 没有跨域限制 */
+    "permissions": [
+        "*://*.baidu.com/*",
+        // 在这儿加入background属性可以让扩展在浏览器打开之前就运行
+        "storage",         // 调用Chrome存储API必须设置这个值
+        "contextMenus",    // 将扩展添加到右键菜单
+        "notifications",	   // 开启桌面提醒功能
+        "tabs",
+        "sessions"
+    ],
+
+    // 后台运行的配置
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+
+	// 是否允许后台运行，默认true
+	"persistent" : true
+	//"page" : "index.html" // page 和 scripts属性不能同时使用
+	// page属性是后台运行的网页，不需设置，因为后台运行本身就不可见
+    },
+    
+    /* 右击选项跳转到的页面 */
+    "options_page" : "options.html",
+
+    "omnibox": { "keyword" : "dandan" }
+}

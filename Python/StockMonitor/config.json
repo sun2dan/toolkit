@@ -1,0 +1,17 @@
+{
+  "smtp": "smtp.163.com",
+  "port": "25",
+  "user": "xxxx@163.com",
+  "pwd": "password",
+  "receiver": ["receiver@163.com"],
+  "stockData": {
+    "jd": {
+      "cost": 40.06,
+      "num": 78
+    },
+    "baba": {
+      "cost": 178,
+      "num": 25
+    }
+  }
+}
