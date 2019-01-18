@@ -13,3 +13,5 @@ Chrome Extension 适合做一些类似自动点按钮、自动输入的功能
 ## Python
 
 #### StockMonitor：股票报表
+#### ServerMonitor：服务器可用性监测
+#### ExamMonitor：软考报名提醒

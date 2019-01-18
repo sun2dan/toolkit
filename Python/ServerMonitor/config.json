@@ -1,0 +1,7 @@
+{
+  "smtp": "smtp.163.com",
+  "port": "25",
+  "user": "xxxx@163.com",
+  "pwd": "xxxx",
+  "receiver": ["xxxx@qq.com"]
+}
